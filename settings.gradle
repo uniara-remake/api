@@ -1,0 +1,4 @@
+rootProject.name = 'fec'
+
+include 'api'
+include 'virtual-sdk'

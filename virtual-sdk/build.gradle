@@ -1,0 +1,9 @@
+plugins {
+    id 'java-library'
+}
+
+apply from: '../commons.gradle'
+
+dependencies {
+    implementation 'org.jsoup:jsoup:1.14.3'
+}
