@@ -15,6 +15,8 @@ public interface Client {
 
     Authorization login(@NonNull String username, @NonNull String password) throws InvalidCredentialsException;
 
+    boolean authenticated(@NonNull Authorization authorization);
+
     byte[] getHomePicture(@NonNull Authorization authorization);
 
     UserInfo getUserInformation(@NonNull Authorization authorization);

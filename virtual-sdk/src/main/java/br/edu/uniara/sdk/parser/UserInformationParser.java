@@ -8,7 +8,12 @@ import org.jsoup.Jsoup;
 public class UserInformationParser implements Parser<String, UserInfo> {
 
     @Override
-    public @NonNull UserInfo parse(@NonNull String html) {
+    public UserInfo parse(@NonNull String html) {
+
+        if (html.length() == 0) {
+            return null;
+        }
+
         val document = Jsoup.parse(html);
 
         val elements = document.select("body > table > tbody > tr:nth-child(7) > td > table > tbody > tr > td:nth-child(3) > table > tbody > tr > td > table > tbody")

@@ -73,6 +73,11 @@ public class VirtualClient implements Client {
     }
 
     @Override
+    public boolean authenticated(@NonNull Authorization authorization) {
+        return getUserInformation(authorization) != null;
+    }
+
+    @Override
     public byte[] getHomePicture(@NonNull Authorization authorization) {
         throw new IllegalStateException("Not implemented");
     }
