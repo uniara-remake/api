@@ -4,6 +4,6 @@ import lombok.NonNull;
 
 public interface Parser<PARSEABLE, PARSED> {
 
-    @NonNull PARSED parse(@NonNull PARSEABLE parseable);
+    PARSED parse(@NonNull PARSEABLE parseable);
 
 }
